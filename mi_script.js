@@ -12,7 +12,7 @@ document.getElementById("formClima").addEventListener("submit", function(e) {
     e.preventDefault();
     let city = document.getElementById("ciudad").value;
     let claveApi = '675a8108b9aef7bfcd40d919d7b4db5f';
-    fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${claveApi}`)
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${claveApi}`)
       .then(response => response.json())
       .then(data => {
  let clima = traducirClima(data.weather[0].main);
